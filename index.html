@@ -5,11 +5,15 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Moisés Darlan - Back-End Developer</title>
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/scrollreveal"></script>
 
     <script src="/js/index.js"></script>
 </head>
@@ -57,7 +61,7 @@
                     <main class="flex-grow">
                         <div class="@container">
                             <div class="flex flex-col gap-12 px-4 py-10 @[864px]:flex-row @[864px]:items-center @[864px]:py-20">
-                                <div class="flex flex-col gap-6 @[864px]:w-1/2 @[864px]:justify-center">
+                                <div id="hero-text" class="flex flex-col gap-6 @[864px]:w-1/2 @[864px]:justify-center">
                                     <div class="flex flex-col gap-4 text-left">
                                         <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] lg:text-6xl">
                                             Olá, eu sou Moisés Darlan
@@ -72,7 +76,7 @@
                                         </a>
                                     </button>
                                 </div>
-                                <div class="w-full @[864px]:w-1/2 flex items-center justify-center">
+                                <div id="hero-image" class="w-full @[864px]:w-1/2 flex items-center justify-center">
                                     <div class="relative w-full max-w-md aspect-square">
                                         <div class="absolute inset-0 flex items-center justify-center">
                                             <div class="absolute w-[85%] h-[85%] rounded-full border-2 border-primary/20"></div>
@@ -183,34 +187,29 @@
                                 Projetos
                             </h2>
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                                <div class="flex flex-col gap-4 p-6 rounded-lg bg-white/5 border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1"><a href="https://artplex.netlify.app/">
+                                <div class="flex flex-col gap-4 p-6 rounded-lg bg-white/5 border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1">
                                     <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("./img/artplax.png");'></div>
                                     <div>
                                         <p class="text-white text-xl font-bold leading-normal">Arte Plex</p>
                                         <p class="text-white/60 text-sm font-normal leading-normal mt-2">Para o desenvolvimento do projeto, trabalhei principalmente no design de layout e na criação da interface responsiva.</p>
                                         <p class="text-accent text-sm font-medium leading-normal mt-3">JavaScript, HTML, CSS e Bootstrap</p>
-                                    
                                     </div>
-                                </a>
                                 </div>
-
-                                <div class="flex flex-col gap-4 p-6 rounded-lg bg-white/5 border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1"><a href="https://github.com/MOISES-DARLAN/ROMA">
+                                <div class="flex flex-col gap-4 p-6 rounded-lg bg-white/5 border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1">
                                     <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("./img/roma.png");'></div>
                                     <div>
                                         <p class="text-white text-xl font-bold leading-normal">Panificadora</p>
                                         <p class="text-white/60 text-sm font-normal leading-normal mt-2">Sistema criado para controle de vendas, estoque e cadastro de produtos. Desenvolvido ambas as partes front-end e back-end.</p>
                                         <p class="text-accent text-sm font-medium leading-normal mt-3">Django, python, JavaScript, Html, CSS e Bootstrap</p>
                                     </div>
-                               </a>
                                 </div>
-                                <div class="flex flex-col gap-4 p-6 rounded-lg bg-white/5 border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1"><a href="https://drikaramos.netlify.app/">
+                                <div class="flex flex-col gap-4 p-6 rounded-lg bg-white/5 border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1">
                                     <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("./img/cerimonialistas.png");'></div>
                                     <div>
                                         <p class="text-white text-xl font-bold leading-normal">Landing Page - Cerimonialista</p>
                                         <p class="text-white/60 text-sm font-normal leading-normal mt-2">criei uma solução para uma cerimonialista que precisava de um site para impulsionar o seu negócio. </p>
                                         <p class="text-accent text-sm font-medium leading-normal mt-3">JavaScript, Html, CSS e Bootstrap</p>
                                     </div>
-                                </a>
                                 </div>
                             </div>
                         </section>
@@ -315,7 +314,6 @@
 
             const toggleMenu = () => {
                 mobileMenu.classList.toggle('hidden');
-
                 if (mobileMenu.classList.contains('hidden')) {
                     menuIcon.textContent = 'menu';
                 } else {
@@ -332,6 +330,44 @@
                     }
                 });
             });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Atraso para garantir que o Tailwind CDN gere os estilos primeiro
+            setTimeout(() => {
+                // Configurações padrão para as animações
+                const sr = ScrollReveal({
+                    distance: '50px',
+                    duration: 800,
+                    easing: 'ease-in-out',
+                    reset: false
+                });
+
+                // Animação da Seção Principal (Hero)
+                sr.reveal('#hero-text h1', { origin: 'left', delay: 200 });
+                sr.reveal('#hero-text h2', { origin: 'right', delay: 300 });
+                sr.reveal('#hero-text button', { origin: 'bottom', delay: 400 });
+                sr.reveal('#hero-image', { scale: 0.8, duration: 1000 });
+
+                // Animação da Seção de Tecnologias
+                sr.reveal('#technologies h2', { origin: 'top' });
+                sr.reveal('#technologies .text-center > p', { origin: 'bottom', delay: 200 });
+                sr.reveal('#technologies .grid > div', { origin: 'bottom', interval: 100 });
+
+                // Animação da Seção de Projetos
+                sr.reveal('#projects h2', { origin: 'top' });
+                sr.reveal('#projects .grid > div', { origin: 'bottom', interval: 100 });
+
+                // Animação da Seção de Contato
+                sr.reveal('#contact h2', { origin: 'top' });
+                sr.reveal('#contact p', { origin: 'bottom', delay: 200 });
+                sr.reveal('#contact form', { scale: 0.9, delay: 300 });
+
+                // Animação do Footer
+                sr.reveal('footer .grid > div', { origin: 'bottom', interval: 150 });
+            }, 100); // Atraso de 100ms
         });
     </script>
 </body>
