@@ -187,30 +187,30 @@
                                 Projetos
                             </h2>
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                                <div class="flex flex-col gap-4 p-6 rounded-lg bg-white/5 border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1">
+                                <div class="flex flex-col gap-4 p-6 rounded-lg bg-white/5 border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1"><a href="https://artplex.netlify.app/">
                                     <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("./img/artplax.png");'></div>
                                     <div>
                                         <p class="text-white text-xl font-bold leading-normal">Arte Plex</p>
                                         <p class="text-white/60 text-sm font-normal leading-normal mt-2">Para o desenvolvimento do projeto, trabalhei principalmente no design de layout e na criação da interface responsiva.</p>
                                         <p class="text-accent text-sm font-medium leading-normal mt-3">JavaScript, HTML, CSS e Bootstrap</p>
                                     </div>
-                                </div>
-                                <div class="flex flex-col gap-4 p-6 rounded-lg bg-white/5 border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1">
+                                </a></div>
+                                <div class="flex flex-col gap-4 p-6 rounded-lg bg-white/5 border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1"><a href="https://github.com/MOISES-DARLAN/ROMA">
                                     <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("./img/roma.png");'></div>
                                     <div>
                                         <p class="text-white text-xl font-bold leading-normal">Panificadora</p>
                                         <p class="text-white/60 text-sm font-normal leading-normal mt-2">Sistema criado para controle de vendas, estoque e cadastro de produtos. Desenvolvido ambas as partes front-end e back-end.</p>
                                         <p class="text-accent text-sm font-medium leading-normal mt-3">Django, python, JavaScript, Html, CSS e Bootstrap</p>
                                     </div>
-                                </div>
-                                <div class="flex flex-col gap-4 p-6 rounded-lg bg-white/5 border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1">
+                                </a></div>
+                                <div class="flex flex-col gap-4 p-6 rounded-lg bg-white/5 border border-white/10 hover:border-primary transition-all duration-300 transform hover:-translate-y-1"><a href="https://drikaramos.netlify.app/">
                                     <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style='background-image: url("./img/cerimonialistas.png");'></div>
                                     <div>
                                         <p class="text-white text-xl font-bold leading-normal">Landing Page - Cerimonialista</p>
                                         <p class="text-white/60 text-sm font-normal leading-normal mt-2">criei uma solução para uma cerimonialista que precisava de um site para impulsionar o seu negócio. </p>
                                         <p class="text-accent text-sm font-medium leading-normal mt-3">JavaScript, Html, CSS e Bootstrap</p>
                                     </div>
-                                </div>
+                                </a></div>
                             </div>
                         </section>
 
@@ -335,9 +335,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Atraso para garantir que o Tailwind CDN gere os estilos primeiro
             setTimeout(() => {
-                // Configurações padrão para as animações
                 const sr = ScrollReveal({
                     distance: '50px',
                     duration: 800,
@@ -345,29 +343,25 @@
                     reset: false
                 });
 
-                // Animação da Seção Principal (Hero)
                 sr.reveal('#hero-text h1', { origin: 'left', delay: 200 });
                 sr.reveal('#hero-text h2', { origin: 'right', delay: 300 });
                 sr.reveal('#hero-text button', { origin: 'bottom', delay: 400 });
                 sr.reveal('#hero-image', { scale: 0.8, duration: 1000 });
 
-                // Animação da Seção de Tecnologias
                 sr.reveal('#technologies h2', { origin: 'top' });
                 sr.reveal('#technologies .text-center > p', { origin: 'bottom', delay: 200 });
                 sr.reveal('#technologies .grid > div', { origin: 'bottom', interval: 100 });
 
-                // Animação da Seção de Projetos
                 sr.reveal('#projects h2', { origin: 'top' });
                 sr.reveal('#projects .grid > div', { origin: 'bottom', interval: 100 });
 
-                // Animação da Seção de Contato
                 sr.reveal('#contact h2', { origin: 'top' });
                 sr.reveal('#contact p', { origin: 'bottom', delay: 200 });
                 sr.reveal('#contact form', { scale: 0.9, delay: 300 });
 
-                // Animação do Footer
+                
                 sr.reveal('footer .grid > div', { origin: 'bottom', interval: 150 });
-            }, 100); // Atraso de 100ms
+            }, 100); 
         });
     </script>
 </body>
